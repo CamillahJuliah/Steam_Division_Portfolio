@@ -136,3 +136,49 @@ body::before {
 
     z-index: -1;
 }
+
+.content-section {
+    padding: 100px 8%;
+    border-top: 1px solid rgba(214, 180, 108, 0.2);
+}
+
+.content-section h2 {
+    max-width: 800px;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #d6b46c;
+}
+
+.content-section p {
+    max-width: 850px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+}
+
+.service-card {
+    padding: 28px;
+    border: 1px solid rgba(214, 180, 108, 0.25);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.service-card h3 {
+    color: #d6b46c;
+    font-weight: normal;
+}
+
+.service-card p {
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
