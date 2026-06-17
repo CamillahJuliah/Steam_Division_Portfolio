@@ -223,3 +223,209 @@ body::before {
         font-size: 3.5rem;
     }
 }
+
+.mystic-intro {
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    border-bottom: 1px solid rgba(214, 180, 108, 0.2);
+    background: radial-gradient(circle, rgba(214, 180, 108, 0.08), transparent 45%);
+}
+
+
+.intro-kicker {
+    color: #d6b46c;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.intro-text {
+    max-width: 520px;
+    color: #f2eadc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.eye {
+    width: 220px;
+    height: 110px;
+    border: 2px solid #d6b46c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px rgba(214, 180, 108, 0.25);
+}
+
+.iris {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #d6b46c, #2c2415 65%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pupil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #050505;
+}
+
+@media (max-width: 768px) {
+    .mystic-intro {
+        min-height: 38vh;
+        padding: 40px 20px;
+    }
+
+    .eye {
+        width: 170px;
+        height: 85px;
+    }
+
+    .iris {
+        width: 58px;
+        height: 58px;
+        transition: transform 0.08s linear;
+    }
+
+    .pupil {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.eye-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    width: 100%;
+}
+
+.eye {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 2px solid rgba(214, 180, 108, 0.7);
+    background:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25), transparent 12%),
+        radial-gradient(circle, #1f2b32 0%, #0b0b0b 62%, #050505 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 45px rgba(214, 180, 108, 0.35),
+        inset 0 0 40px rgba(255, 255, 255, 0.08);
+}
+
+.eye-ring {
+    position: absolute;
+    inset: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(214, 180, 108, 0.65);
+    box-shadow:
+        inset 0 0 18px rgba(214, 180, 108, 0.25),
+        0 0 22px rgba(214, 180, 108, 0.25);
+}
+
+.eye::before {
+    content: "𒈾 𒉿 𒋗 𒍣 𒋼 𒌈";
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    color: rgba(214, 180, 108, 0.9);
+    font-size: 1.7rem;
+    letter-spacing: 8px;
+    text-shadow: 0 0 12px rgba(214, 180, 108, 0.9);
+}
+
+.iris {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, transparent 0 24%, rgba(214, 180, 108, 0.6) 25%, transparent 31%),
+        radial-gradient(circle at 35% 35%, rgba(255,255,255,0.9), transparent 10%),
+        radial-gradient(circle, #d6b46c 0%, #6d8a9b 35%, #111 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.08s linear;
+    box-shadow: 0 0 25px rgba(214, 180, 108, 0.35);
+}
+
+.pupil {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #020202;
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.15);
+}
+
+.orb {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 1px solid rgba(214, 180, 108, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d6b46c;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    background:
+        radial-gradient(circle, rgba(214, 180, 108, 0.18), transparent 62%),
+        #070707;
+    box-shadow: 0 0 26px rgba(214, 180, 108, 0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.orb:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 38px rgba(214, 180, 108, 0.45);
+}
+
+@media (max-width: 768px) {
+    .eye-area {
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    .eye {
+        width: 210px;
+        height: 210px;
+    }
+
+    .iris {
+        width: 95px;
+        height: 95px;
+    }
+
+    .pupil {
+        width: 34px;
+        height: 34px;
+    }
+
+    .orb {
+        width: 95px;
+        height: 95px;
+    }
+
+    .eye::before {
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        top: -32px;
+    }
+}
