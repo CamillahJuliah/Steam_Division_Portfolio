@@ -182,3 +182,44 @@ body::before {
         grid-template-columns: 1fr;
     }
 }
+
+.audion-section {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at top right,
+        rgba(214, 180, 108, 0.08),
+        transparent 35%
+    );
+}
+
+.cuneiform-mark {
+    position: absolute;
+    top: 40px;
+    right: 8%;
+    color: rgba(214, 180, 108, 0.18);
+    font-size: 5rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.audion-section p {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .cuneiform-mark {
+        position: static;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel-number {
+        top: 20px;
+        right: 24px;
+        font-size: 4rem;
+    }
+}
