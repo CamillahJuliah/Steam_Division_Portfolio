@@ -218,8 +218,8 @@ body::before {
 
 @media (max-width: 768px) {
     .panel-number {
-        top: 20px;
-        right: 24px;
-        font-size: 4rem;
+        top: 18px;
+        right: 20px;
+        font-size: 3.5rem;
     }
 }
