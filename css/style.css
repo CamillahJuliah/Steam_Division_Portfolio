@@ -225,7 +225,7 @@ body::before {
 }
 
 .mystic-intro {
-    min-height: 45vh;
+    min-height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -435,10 +435,41 @@ body::after {
     position: fixed;
     inset: 0;
     pointer-events: none;
+    z-index: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(214,180,108,0.08),
+            transparent 70%
+        );
+
+    opacity: 1;
+}
+.cuneiform-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
     z-index: -1;
-    opacity: 0.08;
-    background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 36px 36px;
+
+    color: rgba(214,180,108,0.05);
+
+    font-size: 8rem;
+    line-height: 1.5;
+
+    overflow: hidden;
+}
+
+@keyframes drift {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-40px);
+    }
+}
+
+.cuneiform-bg {
+    animation: drift 30s linear infinite alternate;
 }
