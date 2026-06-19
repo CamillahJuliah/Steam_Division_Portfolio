@@ -355,22 +355,36 @@ body::before {
     height: 120px;
     border-radius: 50%;
     background:
-        radial-gradient(circle, transparent 0 24%, rgba(214, 180, 108, 0.6) 25%, transparent 31%),
-        radial-gradient(circle at 35% 35%, rgba(255,255,255,0.9), transparent 10%),
-        radial-gradient(circle, #d6b46c 0%, #6d8a9b 35%, #111 75%);
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95) 0 6%, transparent 7%),
+        radial-gradient(circle at 50% 50%, #050505 0 22%, transparent 23%),
+        repeating-radial-gradient(circle, rgba(214,180,108,0.35) 0 2px, transparent 3px 7px),
+        conic-gradient(
+            from 20deg,
+            #1b2b31,
+            #6f8790,
+            #d6b46c,
+            #24353b,
+            #0f171a,
+            #8fa3a8,
+            #1b2b31
+        );
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.08s linear;
-    box-shadow: 0 0 25px rgba(214, 180, 108, 0.35);
+    box-shadow:
+        inset 0 0 28px rgba(0,0,0,0.75),
+        0 0 30px rgba(214,180,108,0.35);
 }
 
 .pupil {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
-    background: #020202;
-    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.15);
+    background: radial-gradient(circle, #000 0 60%, #111 100%);
+    box-shadow:
+        0 0 12px rgba(0,0,0,0.9),
+        inset 0 0 8px rgba(255,255,255,0.12);
 }
 
 .orb {
@@ -395,6 +409,18 @@ body::before {
 .orb:hover {
     transform: scale(1.08);
     box-shadow: 0 0 38px rgba(214, 180, 108, 0.45);
+}
+
+.eye::after {
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    top: 68px;
+    left: 72px;
+    background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 45%);
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -604,4 +630,27 @@ body::after {
     .timeline::before {
         display: none;
     }
+}
+
+.timeline-content {
+    transition: all 0.35s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-6);
+    border-color: #d6b46c;
+    box-shadow: 0 0 30px rgba(214, 180, 108, 0.18);
+}
+
+.timeline-item:hover .timeline-year {
+    color:#d6b46c;
+    text-shadow: 0 0 20px rgba(214, 180, 108, 0.5);
+}
+
+.timeline-cuneiform {
+    text-align: center;
+    color: rgba(214, 180, 108, 0.5);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: 12px;
 }
