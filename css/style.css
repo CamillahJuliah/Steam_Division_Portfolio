@@ -533,3 +533,75 @@ body::after {
     text-align: center;
     color: #d6b46c;
 }
+
+.timeline-title {
+    text-align: center;
+    color: #d6b46c;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 230px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(214,180,108,0.4);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.timeline-year {
+    min-width: 230px;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: rgba(214, 180, 108, 0.75);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.timeline-content {
+    flex: 1;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(214,180,108,0.2);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.timeline-content h4 {
+    margin-top: 0;
+    color: #d6b46c;
+}
+
+.timeline-item:hover .timeline-year {
+    color:#d6b46c;
+    text-shadow: 0 0 18px rgba(214, 180, 108, 0.45);
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .timeline-year {
+        font-size: 3rem;
+        min-width: auto;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+}
