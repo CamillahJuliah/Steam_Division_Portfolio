@@ -903,3 +903,91 @@ body::after {
 .eye-ring::after {
     opacity: 0.45;
 }
+
+.eye-symbols {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+
+    color: rgba(214, 180, 108, 0.9);
+    font-size: 1.4rem;
+    letter-spacing: 10px;
+    text-shadow: 0 0 12px rgba(214, 180, 108, 0.8);
+
+    pointer-events: none;
+}
+
+/* Mystinen HUD silmän ympärille */
+
+.eye-hud {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hud-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    border: 1px solid rgba(214, 180, 108, 0.28);
+    box-shadow: 0 0 18px rgba(214, 180, 108, 0.18);
+}
+
+.ring-one {
+    width: 390px;
+    height: 190px;
+    animation: slowRotate 90s linear infinite;
+}
+
+.ring-two {
+    width: 340px;
+    height: 165px;
+    border-style: dashed;
+    opacity: 0.6;
+    animation: slowRotateReverse 120s linear infinite;
+}
+
+.hud-symbols {
+    position: absolute;
+    top: -72px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+
+    color: rgba(214, 180, 108, 0.9);
+    font-size: 1.35rem;
+    letter-spacing: 12px;
+    text-shadow: 0 0 14px rgba(214, 180, 108, 0.85);
+    pointer-events: none;
+}
+
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slowRotateReverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.hud-symbols {
+    top: -115px;
+}
+
+.intro-kicker {
+    position: relative;
+    z-index: 20;
+    margin-bottom: 45px;
+}
