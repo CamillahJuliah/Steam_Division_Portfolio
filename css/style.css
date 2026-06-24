@@ -889,10 +889,6 @@ body::after {
     clip-path: ellipse(50% 4% at 50% 50%);
 }
 
-.eye {
-    width: 320px;
-    height: 150px;
-}
 
 .eye-ring {
     inset: 18px;
@@ -990,4 +986,29 @@ body::after {
     position: relative;
     z-index: 20;
     margin-bottom: 45px;
+}
+
+.story-block {
+    margin-top: 90px;
+    padding: 45px;
+    border: 1px solid rgba(214, 180, 108, 0.25);
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at top left, rgba(214,180,108,0.08), transparent 35%),
+        rgba(255,255,255,0.025);
+}
+
+.story-block h2 {
+    margin-top: 10px;
+}
+
+.story-block p {
+    max-width: 850px;
+}
+
+@media (max-width: 768px) {
+    .story-block {
+        padding: 28px;
+        margin-top: 60px;
+    }
 }
