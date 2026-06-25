@@ -1012,3 +1012,72 @@ body::after {
         margin-top: 60px;
     }
 }
+
+.story-chapter .timeline-year {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.story-chapter .timeline-content {
+    position: relative;
+    max-height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.story-chapter .timeline-content::after {
+    content: "Avaa luku";
+    display: block;
+    margin-top: 18px;
+    color: rgba(214, 180, 108, 0.75);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.story-chapter.open .timeline-content {
+    max-height: 900px;
+}
+
+.story-chapter.open .timeline-content::after {
+    content: "Sulje luku";
+}
+
+.chapter-label {
+    color: rgba(214, 180, 108, 0.65);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.chapter-more {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.story-chapter.open .chapter-more {
+    opacity: 1;
+}
+
+.story-chapter .timeline-content::after {
+    content: "▼ Avaa luku";
+    display: block;
+    margin-top: 18px;
+    color: rgba(214, 180, 108, 0.65);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    transition: all 0.35s ease;
+}
+
+.story-chapter .timeline-content:hover::after {
+    content: "▼ Astu sisään...";
+    color: rgba(214, 180, 108, 1);
+    letter-spacing: 4px;
+}
+
+.story-chapter.open .timeline-content::after {
+    content: "▲ Sulje luku";
+}

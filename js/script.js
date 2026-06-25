@@ -64,3 +64,10 @@ function randomBlink() {
 animateEye();
 setTimeout(randomBlink, 3000);
 
+const storyChapters = document.querySelectorAll(".story-chapter");
+
+storyChapters.forEach(function (chapter) {
+    chapter.addEventListener("click", function () {
+        chapter.classList.toggle("open");
+    });
+});
