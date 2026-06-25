@@ -1053,17 +1053,19 @@ body::after {
 }
 
 .chapter-more {
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: all 0.35s ease;
 }
 
 .story-chapter.open .chapter-more {
+    max-height: 700px;
     opacity: 1;
+    margin-top: 18px;
 }
 
-.story-chapter .timeline-content::after {
-    content: "▼ Avaa luku";
-    display: block;
+.chapter-action {
     margin-top: 18px;
     color: rgba(214, 180, 108, 0.65);
     letter-spacing: 2px;
@@ -1072,12 +1074,12 @@ body::after {
     transition: all 0.35s ease;
 }
 
-.story-chapter .timeline-content:hover::after {
-    content: "▼ Astu sisään...";
+.story-chapter:not(.open):hover .chapter-action {
     color: rgba(214, 180, 108, 1);
     letter-spacing: 4px;
 }
 
-.story-chapter.open .timeline-content::after {
-    content: "▲ Sulje luku";
+.story-chapter .timeline-content {
+    max-height: none !important;
+    overflow: visible !important;
 }

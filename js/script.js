@@ -66,8 +66,34 @@ setTimeout(randomBlink, 3000);
 
 const storyChapters = document.querySelectorAll(".story-chapter");
 
-storyChapters.forEach(function (chapter) {
+storyChapters.forEach(function (chapter, index) {
+    const actionText = chapter.querySelector(".chapter-action");
+
+    chapter.addEventListener("mouseenter", function () {
+        if (!chapter.classList.contains("open")) {
+            if (index === 0) {
+                actionText.textContent = "▼ Astu sisään...";
+            } else if (index === storyChapters.length - 1) {
+                actionText.textContent = "▼ Saavu nykyhetkeen";
+            } else {
+                actionText.textContent = "▼ Jatka matkaa...";
+            }
+        }
+    });
+
+    chapter.addEventListener("mouseleave", function () {
+        if (!chapter.classList.contains("open")) {
+            actionText.textContent = "▼ Avaa luku";
+        }
+    });
+
     chapter.addEventListener("click", function () {
         chapter.classList.toggle("open");
+
+        if (chapter.classList.contains("open")) {
+            actionText.textContent = "▲ Sulje luku";
+        } else {
+            actionText.textContent = "▼ Avaa luku";
+        }
     });
 });
